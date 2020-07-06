@@ -9,6 +9,9 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SidenavComponent } from './home/sidenav/sidenav.component';
+import { MovieDisplayComponent } from './home/movie-display/movie-display.component';
+import { SearchComponent } from './home/search/search.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     HeaderComponent,
     HomeComponent,
+    SidenavComponent,
+    MovieDisplayComponent,
+    SearchComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ClarityModule, BrowserAnimationsModule],
   providers: [],
