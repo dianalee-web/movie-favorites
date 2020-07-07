@@ -6,13 +6,13 @@
 
 .card {
   margin: 8px;
-  width: 330px;
+  width: 280px;
 }
 
 
 
 .movie-title {
-  height: 80px;
+  height: 60px;
 }
 
 .card-footer {
@@ -20,6 +20,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 50px;
 }
 
 .card-img {

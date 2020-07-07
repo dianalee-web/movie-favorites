@@ -14,6 +14,7 @@ export class UserService {
   baseUrl: string = 'http://localhost:3000/api/';
   appUserUrl: string = 'appUsers/';
   loginUrl: string = 'appUsers/login';
+  favoritesUrl: string = 'favorites';
 
   constructor(private http: HttpClient) {}
 
@@ -22,6 +23,9 @@ export class UserService {
   }
   loginUser(userCredentials) {
     return this.http.post(`${this.baseUrl}${this.loginUrl}`, userCredentials);
+  }
+  addUserFavorites(favoriteMovie) {
+    return this.http.post(`${this.baseUrl}${this.favoritesUrl}`, favoriteMovie);
   }
   // createHeader() {
   //   return new HttpHeaders().set(

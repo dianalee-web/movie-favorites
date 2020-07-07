@@ -8,16 +8,19 @@
       <img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" />
     </div>
     <div class="card-block">
-      <h3 class="movie-title card-title">{{ movie.title }}</h3>
+      <h5 class="movie-title card-title">{{ movie.title }}</h5>
       <!-- <h3 class="card-title">{{ movie.name }}</h3> -->
       <p class="card-text">Release Date: {{ movie.release_date | date }}</p>
       <p class="card-text">Average Rating: {{ movie.vote_average }}</p>
     </div>
 
     <div class="card-footer">
-      <a href="..." class="btn btn-sm btn-link">View Details</a>
+      <!-- <app-modal></app-modal> -->
+      <a class="btn btn-sm btn-link" (click)="seeMovieDetails(movie)"
+        >View Details</a
+      >
       <!-- <p><clr-icon shape="heart"></clr-icon></p> -->
-      <app-favorites></app-favorites>
+      <app-favorites (click)="addToFavorites(movie)"></app-favorites>
     </div>
   </div>
   <!-- </div> -->

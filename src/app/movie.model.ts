@@ -1,7 +1,8 @@
 export class Movie {
-  public title: string,
-  public vote_average: any,
-  public poster_path: string,
-  public release_date: string,
-
+  title: string;
+  id: number;
+  vote_average: any;
+  poster_path: string;
+  release_date: string;
+  genre: any;
 }

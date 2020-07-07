@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
   genres = [];
+  genre = {
+    id: null,
+    name: null,
+  };
   constructor(private movieService: MovieService) {}
 
   ngOnInit() {
@@ -17,9 +21,10 @@ export class SidenavComponent implements OnInit {
     this.movieService.getGenres().subscribe((res: any) => {
       console.log(res.genres);
       Object.values(res.genres).forEach((entry) => {
-        // console.log('entry', entry);
+        console.log(entry);
         this.genres.push(entry);
       });
+
       return this.genres;
     });
   }
