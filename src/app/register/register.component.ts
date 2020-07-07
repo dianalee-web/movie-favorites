@@ -1,3 +1,5 @@
+import { ApiService } from './../services/api.service';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,7 +15,23 @@ export class RegisterComponent implements OnInit {
     password: null,
   };
 
-  constructor() {}
+  constructor(private apiService: ApiService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    // this.registerUser();
+  }
+  signUp() {
+    this.apiService.registerUser(this.form).subscribe((res: any) => {
+      console.log(res);
+      sessionStorage.setItem('token', res.token);
+      sessionStorage.setItem('userId', res.userId);
+      this.apiService.firstName = res.firstName;
+      this.apiService.isLoggedIn = true;
+      this.goToDash();
+    });
+  }
+
+  goToDash() {
+    this.router.navigate(['/home']);
+  }
 }

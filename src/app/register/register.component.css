@@ -1,0 +1,19 @@
+div.register {
+  height: 100%;
+  /* background-color: teal; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form {
+  min-height: 90vh;
+  width: 500px;
+}
+
+input {
+  width: 500px;
+
+}
+
+button {}

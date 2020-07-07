@@ -1,0 +1,63 @@
+<div class="register">
+  <form class="login register-form">
+    <section class="title">
+      <h3>Register</h3>
+    </section>
+    <div class="login-group">
+      <clr-input-container>
+        <label class="clr-sr-only">First Name</label>
+        <input
+          type="text"
+          name="firstName"
+          clrInput
+          placeholder="First Name"
+          [(ngModel)]="form.firstName"
+        />
+      </clr-input-container>
+      <clr-input-container>
+        <label class="clr-sr-only">Last Name</label>
+        <input
+          type="text"
+          name="lastName"
+          clrInput
+          placeholder="Last Name"
+          [(ngModel)]="form.lastName"
+        />
+      </clr-input-container>
+      <clr-input-container>
+        <label class="clr-sr-only">Email</label>
+        <input
+          type="text"
+          name="email"
+          clrInput
+          placeholder="Email"
+          [(ngModel)]="form.email"
+        />
+      </clr-input-container>
+      <clr-input-container>
+        <label class="clr-sr-only">Password</label>
+        <input
+          type="text"
+          name="password"
+          clrInput
+          placeholder="Password"
+          [(ngModel)]="form.password"
+        />
+      </clr-input-container>
+      <!-- <clr-password-container>
+        <label class="clr-sr-only">Password</label>
+        <input
+          type="password"
+          name="password"
+          clrPassword
+          placeholder="Password"
+          [(ngModel)]="form.password"
+        />
+      </clr-password-container> -->
+      <br />
+      <button type="submit" (click)="signUp()" class="btn btn-primary">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
