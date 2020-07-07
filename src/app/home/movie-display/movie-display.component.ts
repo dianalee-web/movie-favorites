@@ -1,8 +1,12 @@
 import { UserService } from './../../services/user.service';
-import { Movie } from './../../movie.model';
+import { iMovie } from './../../movie.model';
 import { MovieService } from './../../services/movie.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
+
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-movie-display',
@@ -11,7 +15,7 @@ import { Router } from '@angular/router';
 })
 export class MovieDisplayComponent implements OnInit {
   movies = [];
-  movie: any = Movie;
+  movie: iMovie;
   // movieForm = {};
 
   constructor(
@@ -24,19 +28,24 @@ export class MovieDisplayComponent implements OnInit {
     this.fetchData();
   }
   fetchData() {
-    this.movieService.getMovies().subscribe((res: any) => {
-      console.log(res.results);
-      this.movieService.data = res.results;
-      Object.values(res.results).forEach((entry: any) => {
-        console.log(entry);
-        this.movie.title = entry.title;
-        this.movie.id = entry.id;
-        this.movies.push(entry);
-        console.log(this.movies);
-      });
+    this.movieService
+      .getMovies()
+      // .pipe(map(responseData=>{
+      //   const moviesArray:
+      // }))
+      .subscribe((res: any) => {
+        console.log('subscribe', res.results);
 
-      return this.movies;
-    });
+        this.movies = res.results;
+        Object.values(res.results).forEach((entry: any) => {
+          // this.movie.title = entry.title;
+          // this.movie.id = entry.id;
+          this.movies.push(entry);
+          console.log(entry);
+          // console.log(this.movies);
+        });
+      });
+    return this.movies;
   }
   seeMovieDetails(movie) {
     // this.movie.title = movie.title;

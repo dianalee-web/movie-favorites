@@ -8,20 +8,25 @@
       <img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" />
     </div>
     <div class="card-block">
-      <h5 class="movie-title card-title">{{ movie.title }}</h5>
+      <h5 class="movie-title card-title">
+        <a>
+          {{ movie.title }}
+        </a>
+      </h5>
       <!-- <h3 class="card-title">{{ movie.name }}</h3> -->
-      <p class="card-text">Release Date: {{ movie.release_date | date }}</p>
-      <p class="card-text">Average Rating: {{ movie.vote_average }}</p>
+      <p class="card-text" *ngIf="movie.release_date"></p>
+      <div class="icons">
+        <p class="rating">
+          <clr-icon shape="star" class="is-solid"></clr-icon
+          >{{ movie.vote_average }}
+        </p>
+
+        <p><clr-icon shape="heart" (click)="addToFavorites()"></clr-icon></p>
+      </div>
+      <!-- <p class="card-text">Average Rating: {{ movie.vote_average }}</p> -->
     </div>
 
-    <div class="card-footer">
-      <!-- <app-modal></app-modal> -->
-      <a class="btn btn-sm btn-link" (click)="seeMovieDetails(movie)"
-        >View Details</a
-      >
-      <!-- <p><clr-icon shape="heart"></clr-icon></p> -->
-      <app-favorites (click)="addToFavorites(movie)"></app-favorites>
-    </div>
+    <!-- <div class="card-footer"></div> -->
   </div>
   <!-- </div> -->
 </div>

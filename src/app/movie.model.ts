@@ -1,4 +1,4 @@
-export class Movie {
+export interface iMovie {
   title: string;
   id: number;
   vote_average: any;

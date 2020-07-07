@@ -1,12 +1,12 @@
-import { Movie } from './../movie.model';
+import { iMovie } from './../movie.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
 export class MovieService {
-  movie = Movie;
+  movie: iMovie;
   data: any;
   movieTitle: string;
   // url: string =

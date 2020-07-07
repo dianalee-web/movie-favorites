@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -14,9 +15,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './home/sidenav/sidenav.component';
 import { MovieDisplayComponent } from './home/movie-display/movie-display.component';
 import { SearchComponent } from './home/search/search.component';
-import { FavoritesComponent } from './home/favorites/favorites.component';
-import { ModalComponent } from './modal/modal.component';
-import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +26,7 @@ import { LoginComponent } from './login/login.component';
     SidenavComponent,
     MovieDisplayComponent,
     SearchComponent,
-    FavoritesComponent,
-    ModalComponent,
+
     LoginComponent,
   ],
   imports: [

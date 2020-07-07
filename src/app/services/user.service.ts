@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+// import { Observable } from 'rxjs/Observable';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
+import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
 })
@@ -27,10 +31,24 @@ export class UserService {
   addUserFavorites(favoriteMovie) {
     return this.http.post(`${this.baseUrl}${this.favoritesUrl}`, favoriteMovie);
   }
-  // createHeader() {
-  //   return new HttpHeaders().set(
-  //     'Authorization',
-  //     sessionStorage.getItem('token')
-  //   );
-  // }
+  createHeader() {
+    return new HttpHeaders().set(
+      'Authorization',
+      sessionStorage.getItem('token')
+    );
+  }
+
+  addFavoriteMovie(movieForm) {
+    return this.http.post(
+      `${this.baseUrl}appUsers/${this.userId}/favorites/`,
+      movieForm,
+      { headers: this.createHeader() }
+    );
+  }
+
+  getFavorites() {
+    return this.http.get(
+      `${this.baseUrl}appUsers/${this.userId}/favorites??access_token=${this.token}`
+    );
+  }
 }
