@@ -23,4 +23,5 @@ export class SidenavComponent implements OnInit {
       return this.genres;
     });
   }
+  onSelect() {}
 }
