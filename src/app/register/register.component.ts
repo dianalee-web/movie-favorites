@@ -1,4 +1,4 @@
-import { ApiService } from './../services/api.service';
+import { UserService } from './../services/user.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
+  firstName;
+  isLoggedIn;
   form = {
     firstName: null,
     lastName: null,
@@ -15,18 +17,18 @@ export class RegisterComponent implements OnInit {
     password: null,
   };
 
-  constructor(private apiService: ApiService, private router: Router) {}
+  constructor(private router: Router, private userService: UserService) {}
 
   ngOnInit() {
     // this.registerUser();
   }
   signUp() {
-    this.apiService.registerUser(this.form).subscribe((res: any) => {
+    this.userService.registerUser(this.form).subscribe((res: any) => {
       console.log(res);
       sessionStorage.setItem('token', res.token);
       sessionStorage.setItem('userId', res.userId);
-      this.apiService.firstName = res.firstName;
-      this.apiService.isLoggedIn = true;
+      this.userService.firstName = res.firstName;
+      this.userService.isLoggedIn = true;
       this.goToDash();
     });
   }
