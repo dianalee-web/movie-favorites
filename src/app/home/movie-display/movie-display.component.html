@@ -5,7 +5,8 @@
       <img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" />
     </div>
     <div class="card-block">
-      <h3 class="card-title">{{ movie.title }} {{ movie.name }}</h3>
+      <h3 class="card-title">{{ movie.title }}</h3>
+      <h3 class="card-title">{{ movie.name }}</h3>
       <p class="card-text">Release Date: {{ movie.release_date | date }}</p>
       <p class="card-text">Average Rating: {{ movie.vote_average }}</p>
     </div>

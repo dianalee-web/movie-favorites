@@ -1,15 +1,18 @@
+import { UserService } from './../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+  isLoggedIn: boolean;
 
-  constructor() { }
+  firstName: string;
+  constructor(private userService: UserService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    // this.firstName = this.userService.firstName;
   }
-
 }

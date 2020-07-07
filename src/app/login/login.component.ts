@@ -1,4 +1,6 @@
+import { UserService } from './../services/user.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,8 +12,29 @@ export class LoginComponent implements OnInit {
     password: null,
     email: null,
   };
-  constructor() {}
+
+  constructor(private router: Router, private userService: UserService) {}
 
   ngOnInit(): void {}
-  login() {}
+
+  login() {
+    this.userService.loginUser(this.form).subscribe((res: any) => {
+      console.log(res);
+      sessionStorage.setItem('token', res.token);
+      sessionStorage.setItem('userId', res.userId);
+      this.userService.firstName = res.firstName;
+      // this.userService.isLoggedIn = true;
+      if (sessionStorage.token != null) {
+        alert('log in success!');
+        this.goToDash();
+      } else {
+        alert('Register !');
+        this.router.navigate(['/register']);
+      }
+    });
+  }
+
+  goToDash() {
+    this.router.navigate(['/home']);
+  }
 }

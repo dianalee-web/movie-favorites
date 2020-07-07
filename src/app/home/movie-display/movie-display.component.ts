@@ -16,9 +16,9 @@ export class MovieDisplayComponent implements OnInit {
   }
   fetchData() {
     this.movieService.getMovies().subscribe((res: any) => {
-      console.log(res.results);
+      // console.log(res.results);
       Object.values(res.results).forEach((entry) => {
-        console.log(entry);
+        // console.log(entry);
         this.movies.push(entry);
       });
       return this.movies;
