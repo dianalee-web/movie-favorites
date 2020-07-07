@@ -26,4 +26,5 @@ export class MovieDisplayComponent implements OnInit {
     });
     // console.log(this.movies);
   }
+  addToFavorites() {}
 }

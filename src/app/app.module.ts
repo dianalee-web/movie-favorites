@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './home/sidenav/sidenav.component';
 import { MovieDisplayComponent } from './home/movie-display/movie-display.component';
 import { SearchComponent } from './home/search/search.component';
+import { FavoritesComponent } from './home/favorites/favorites.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { SearchComponent } from './home/search/search.component';
     SidenavComponent,
     MovieDisplayComponent,
     SearchComponent,
+    FavoritesComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

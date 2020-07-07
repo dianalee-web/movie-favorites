@@ -1,4 +1,6 @@
 #search {
   border: 1px solid #eee;
   height: 8vh;
+  /* display: flex; */
+  padding: 10px;
 }
