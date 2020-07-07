@@ -1,6 +1,7 @@
-<clr-vertical-nav>
-  <a clrVerticalNavLink routerLink="./charmander" routerLinkActive="active"
-    >Charmander</a
+<clr-vertical-nav *ngFor="let genre of genres">
+  <a clrVerticalNavLink> {{ genre.name }} </a>
+  <!-- <a clrVerticalNavLink routerLink="./charmander" routerLinkActive="active"
+    ></a
   >
   <a clrVerticalNavLink routerLink="./jigglypuff" routerLinkActive="active"
     >Jigglypuff</a
@@ -17,5 +18,5 @@
   <div class="nav-divider"></div>
   <a clrVerticalNavLink routerLink="./credit" routerLinkActive="active"
     >Credit</a
-  >
+  > -->
 </clr-vertical-nav>

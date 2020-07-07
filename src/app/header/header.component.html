@@ -6,7 +6,6 @@
     <a class="nav-link" routerLink="register">Register</a>
   </div>
   <div class="header-actions">
-    <app-login *ngIf="!isLoggedIn"></app-login>
     <clr-dropdown *ngIf="!isLoggedIn">
       <button
         class="nav-text"
@@ -22,7 +21,4 @@
       </clr-dropdown-menu>
     </clr-dropdown>
   </div>
-  <!-- <div>
-    <app-login></app-login>
-  </div> -->
 </header>

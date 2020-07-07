@@ -22,9 +22,7 @@ export class MovieDisplayComponent implements OnInit {
         this.movies.push(entry);
       });
       return this.movies;
-      // this.movies = res;
     });
-    // console.log(this.movies);
   }
   addToFavorites() {}
 }
