@@ -1,1 +1,10 @@
+.movie-display {
+  display: flex;
+  justify-content: center;
 
+}
+
+.card {
+  margin: 8px;
+  width: 300px;
+}

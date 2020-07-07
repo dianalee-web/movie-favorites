@@ -1,83 +1,44 @@
-<div>
+<div class="movie-display clr-row">
+  <!-- <div class="clr-col-lg-4 clr-col-12"> -->
+  <div class="card" *ngFor="let movie of movies">
+    <div class="card-img">
+      <img src="https://image.tmdb.org/t/p/w300/{{ movie.poster_path }}" />
+    </div>
+    <div class="card-block">
+      <h4 class="card-title">Title</h4>
+      <p class="card-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, aut. Nihil
+        nemo, necessitatibus earum.
+      </p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">Lorem ipsum dolor.</li>
+      <li class="list-group-item">Lorem ipsum dolor sit.</li>
+      <li class="list-group-item">Lorem ipsum.</li>
+    </ul>
+    <div class="card-footer">
+      <a href="..." class="btn btn-sm btn-link">Action 1</a>
+      <a href="..." class="btn btn-sm btn-link">Action 2</a>
+    </div>
+  </div>
+  <!-- </div> -->
+</div>
+<!-- <div>
   <div class="clr-row">
     <div class="clr-col-12">
       <h3>Popular Movies</h3>
     </div>
   </div>
   <div class="clr-row">
-    <div class="clr-col-lg-4 clr-col-12">
-      <div class="card">
+    <div class="clr-col-lg-4 movie-display">
+      <div class="card" *ngFor="let movie of movies">
         <div class="card-img">
-          <img src="..." />
+          <img src="https://image.tmdb.org/t/p/w300/{{ movie.poster_path }}" />
         </div>
         <div class="card-block">
-          <h4 class="card-title">Title</h4>
-          <p class="card-text">
-            release date
-          </p>
-          <p class="card-text">
-            viewer rating
-          </p>
-        </div>
+          <h4 class="card-title">{{ movie.title }} {{ movie.name }}</h4>
 
-        <div class="card-footer">
-          <a href="..." class="btn btn-sm btn-link"> Details</a>
-          <a href="..." class="btn btn-sm btn-link">Favorites</a>
-        </div>
-      </div>
-    </div>
-    <div class="clr-col-lg-4 clr-col-12 movie-card-display">
-      <div class="card">
-        <div class="card-img">
-          <img src="..." />
-        </div>
-        <div class="card-block">
-          <h4 class="card-title">Title</h4>
-          <p class="card-text">
-            release date
-          </p>
-          <p class="card-text">
-            viewer rating
-          </p>
-        </div>
-
-        <div class="card-footer">
-          <a href="..." class="btn btn-sm btn-link"> Details</a>
-          <a href="..." class="btn btn-sm btn-link">Favorites</a>
-        </div>
-      </div>
-    </div>
-    <div class="clr-col-lg-4 clr-col-12 movie-card-display">
-      <div class="card">
-        <div class="card-img">
-          <img src="..." />
-        </div>
-        <div class="card-block">
-          <h4 class="card-title">Title</h4>
-          <p class="card-text">
-            release date
-          </p>
-          <p class="card-text">
-            viewer rating
-          </p>
-        </div>
-
-        <div class="card-footer">
-          <a href="..." class="btn btn-sm btn-link"> Details</a>
-          <a href="..." class="btn btn-sm btn-link">Favorites</a>
-        </div>
-      </div>
-    </div>
-    <div class="clr-col-lg-4 clr-col-12 movie-card-display">
-      <div class="card">
-        <div class="card-img">
-          <img src="..." />
-        </div>
-        <div class="card-block">
-          <h4 class="card-title">Title</h4>
-          <p class="card-text">
-            release date
-          </p>
+          <p class="card-text">Release Date: {{ movie.release_date | date }}</p>
           <p class="card-text">
             viewer rating
           </p>
@@ -90,4 +51,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
