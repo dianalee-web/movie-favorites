@@ -6,11 +6,13 @@
 
 .card {
   margin: 8px;
-  width: 310px;
+  width: 330px;
 }
 
-.card-block {
-  height: 130px;
+
+
+.movie-title {
+  height: 80px;
 }
 
 .card-footer {

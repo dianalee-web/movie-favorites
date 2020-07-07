@@ -5,23 +5,12 @@
       <img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" />
     </div>
     <div class="card-block">
-      <h3 class="card-title">{{ movie.title }}</h3>
-      <h3 class="card-title">{{ movie.name }}</h3>
+      <h3 class="movie-title card-title">{{ movie.title }}</h3>
+      <!-- <h3 class="card-title">{{ movie.name }}</h3> -->
       <p class="card-text">Release Date: {{ movie.release_date | date }}</p>
       <p class="card-text">Average Rating: {{ movie.vote_average }}</p>
     </div>
-    <!-- <ul class="list-group">
-      <li class="list-group-item">
-        Release Date: {{ movie.release_date | date }}
-      </li>
-      <li class="list-group-item">
-        <span class="badge">
-          <clr-icon shape="star" class="is-solid">1</clr-icon
-          >
-        </span>
-      </li>
-      <li class="list-group-item">Lorem ipsum.</li>
-    </ul> -->
+
     <div class="card-footer">
       <a href="..." class="btn btn-sm btn-link">View Details</a>
       <!-- <p><clr-icon shape="heart"></clr-icon></p> -->
