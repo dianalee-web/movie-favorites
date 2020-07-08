@@ -14,7 +14,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./movie-display.component.css'],
 })
 export class MovieDisplayComponent implements OnInit {
-  isFavorite;
+  basic;
   movies;
   movie: iMovie = {
     movieTitle: null,
@@ -40,6 +40,7 @@ export class MovieDisplayComponent implements OnInit {
     });
   }
   seeMovieDetails(movie) {
+    this.basic = !this.basic;
     // console.log(this.movie);
     this.movie = movie;
     console.log(movie);
@@ -51,9 +52,11 @@ export class MovieDisplayComponent implements OnInit {
     this.movie.thirdPartyMovieId = movie.id;
     this.movie.posterPath = movie.poster_path;
     console.log(this.movie);
+    // this.isFavorite = true;
+
+    this.userService.addUserFavorites(this.movie);
 
     alert(`${this.movie.movieTitle} has been added to your favorites!`);
-    this.userService.addUserFavorites(this.movie);
     // this.userService.addUserFavorites(this.movie).subscribe((res: any) => {
     //   console.log(res);
     // });

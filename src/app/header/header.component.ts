@@ -13,6 +13,9 @@ export class HeaderComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
+    // this.userService.loginUser(params);
     // this.firstName = this.userService.firstName;
+    this.loginUser();
   }
+  loginUser() {}
 }

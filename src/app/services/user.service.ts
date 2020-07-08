@@ -29,7 +29,6 @@ export class UserService {
     return this.http.post(`${this.baseUrl}${this.loginUrl}`, userCredentials);
   }
   addUserFavorites(favoriteMovie) {
-    // http://localhost:3000/api/favorites?access_token=4FfjkiITWy7PCalsUYvHMw9fES2UL7Jm4UaXXVmKlBJTYjIe84jasEUmhxITg0kS
     return this.http.post(
       `http://localhost:3000/api/favorites?access_token=${this.token}`,
       favoriteMovie
