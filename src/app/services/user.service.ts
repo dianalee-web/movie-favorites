@@ -14,7 +14,7 @@ export class UserService {
   userEmail: string = '';
   userId = sessionStorage.getItem('userId');
   token = sessionStorage.getItem('token');
-
+  // token = '"JDAT8LY7ie88LbsWMK2TKdgOZWHAhpG2zSbCjXZV1KyiVnrYpby6YkSbuo7Bja0c"';
   baseUrl: string = 'http://localhost:3000/api/';
   appUserUrl: string = 'appUsers/';
   loginUrl: string = 'appUsers/login';
@@ -29,7 +29,11 @@ export class UserService {
     return this.http.post(`${this.baseUrl}${this.loginUrl}`, userCredentials);
   }
   addUserFavorites(favoriteMovie) {
-    return this.http.post(`${this.baseUrl}${this.favoritesUrl}`, favoriteMovie);
+    // http://localhost:3000/api/favorites?access_token=4FfjkiITWy7PCalsUYvHMw9fES2UL7Jm4UaXXVmKlBJTYjIe84jasEUmhxITg0kS
+    return this.http.post(
+      `http://localhost:3000/api/favorites?access_token=${this.token}`,
+      favoriteMovie
+    );
   }
   createHeader() {
     return new HttpHeaders().set(
@@ -40,7 +44,7 @@ export class UserService {
 
   addFavoriteMovie(movieForm) {
     return this.http.post(
-      `${this.baseUrl}appUsers/${this.userId}/favorites/`,
+      `${this.baseUrl}appUsers/${this.userId}/${this.favoritesUrl}`,
       movieForm,
       { headers: this.createHeader() }
     );
@@ -48,7 +52,7 @@ export class UserService {
 
   getFavorites() {
     return this.http.get(
-      `${this.baseUrl}appUsers/${this.userId}/favorites??access_token=${this.token}`
+      `${this.baseUrl}appUsers/${this.userId}/favorites/access_token=${this.token}`
     );
   }
 }

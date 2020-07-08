@@ -14,7 +14,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./movie-display.component.css'],
 })
 export class MovieDisplayComponent implements OnInit {
-  movies = [];
+  movies;
   movie: iMovie;
   // movieForm = {};
 
@@ -28,33 +28,30 @@ export class MovieDisplayComponent implements OnInit {
     this.fetchData();
   }
   fetchData() {
-    this.movieService
-      .getMovies()
-      // .pipe(map(responseData=>{
-      //   const moviesArray:
-      // }))
-      .subscribe((res: any) => {
-        console.log('subscribe', res.results);
-
-        this.movies = res.results;
-        Object.values(res.results).forEach((entry: any) => {
-          // this.movie.title = entry.title;
-          // this.movie.id = entry.id;
-          this.movies.push(entry);
-          console.log(entry);
-          // console.log(this.movies);
-        });
-      });
-    return this.movies;
+    // console.log('movie-display', this.movies);
+    this.movieService.getMovies().subscribe((res: any) => {
+      console.log(res.results);
+      this.movies = res.results;
+    });
   }
   seeMovieDetails(movie) {
-    // this.movie.title = movie.title;
+    // console.log(this.movie);
+    this.movie = movie;
+    console.log(movie);
   }
-  addToFavorites() {
-    alert(`${this.movie.title} has been added to your favorites!`);
-    this.userService.addUserFavorites(this.movie).subscribe((res: any) => {
-      console.log(res);
-    });
+  addToFavorites(movie) {
+    this.movie = movie;
+
+    this.movie.movieTitle = movie.title;
+    this.movie.thirdPartyMovieId = movie.id;
+    this.movie.posterPath = movie.poster_path;
+    alert(`${this.movie.movieTitle} has been added to your favorites!`);
+    this.userService.addUserFavorites(this.movie);
+    // this.userService.addUserFavorites(this.movie).subscribe((res: any) => {
+    //   console.log(res);
+    // });
+
+    return movie;
 
     // alert(this.movie);
   }

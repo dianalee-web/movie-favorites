@@ -1,8 +1,8 @@
 export interface iMovie {
-  title: string;
-  id: number;
-  vote_average: any;
-  poster_path: string;
-  release_date: string;
-  genre: any;
+  movieTitle: string;
+  thirdPartyMovieId: number;
+  // vote_average: any;
+  posterPath: string;
+  // release_date: string;
+  // genre: any;
 }

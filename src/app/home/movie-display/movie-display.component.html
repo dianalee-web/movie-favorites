@@ -9,21 +9,19 @@
     </div>
     <div class="card-block">
       <h5 class="movie-title card-title">
-        <a>
-          {{ movie.title }}
-        </a>
+        {{ movie.title | titlecase }}
       </h5>
+      <p class="card-text">Release Date: {{ movie.release_date | date }}</p>
+      <p class="card-text">Average Rating: {{ movie.vote_average }}</p>
       <!-- <h3 class="card-title">{{ movie.name }}</h3> -->
       <p class="card-text" *ngIf="movie.release_date"></p>
       <div class="icons">
-        <p class="rating">
-          <clr-icon shape="star" class="is-solid"></clr-icon
-          >{{ movie.vote_average }}
-        </p>
+        <a class="rating btn btn-link" (click)="seeMovieDetails(movie)"
+          >View Details</a
+        >
 
-        <p><clr-icon shape="heart" (click)="addToFavorites()"></clr-icon></p>
+        <clr-icon shape="heart" (click)="addToFavorites(movie)"></clr-icon>
       </div>
-      <!-- <p class="card-text">Average Rating: {{ movie.vote_average }}</p> -->
     </div>
 
     <!-- <div class="card-footer"></div> -->
