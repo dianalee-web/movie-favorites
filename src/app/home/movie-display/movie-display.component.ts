@@ -14,8 +14,13 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./movie-display.component.css'],
 })
 export class MovieDisplayComponent implements OnInit {
+  isFavorite;
   movies;
-  movie: iMovie;
+  movie: iMovie = {
+    movieTitle: null,
+    thirdPartyMovieId: null,
+    posterPath: null,
+  };
   // movieForm = {};
 
   constructor(
@@ -40,11 +45,13 @@ export class MovieDisplayComponent implements OnInit {
     console.log(movie);
   }
   addToFavorites(movie) {
-    this.movie = movie;
+    // this.movie = movie;
 
     this.movie.movieTitle = movie.title;
     this.movie.thirdPartyMovieId = movie.id;
     this.movie.posterPath = movie.poster_path;
+    console.log(this.movie);
+
     alert(`${this.movie.movieTitle} has been added to your favorites!`);
     this.userService.addUserFavorites(this.movie);
     // this.userService.addUserFavorites(this.movie).subscribe((res: any) => {
