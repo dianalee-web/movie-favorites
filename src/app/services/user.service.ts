@@ -64,4 +64,12 @@ export class UserService {
       `${this.baseUrl}appUsers/${creds.userId}/favorites/access_token=${creds.token}`
     );
   }
+  logOut() {
+    const creds = this.getCreds();
+    return this.http.post(
+      `${this.baseUrl}appUsers/logout?access_token=${creds.token}`,
+      {},
+      { headers: this.createHeader() }
+    );
+  }
 }

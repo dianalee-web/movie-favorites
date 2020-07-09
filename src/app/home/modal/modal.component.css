@@ -1,0 +1,10 @@
+.movie-card {
+  display: flex;
+
+  /* justify-content: center; */
+
+}
+
+.text-content {
+  margin: 0 20px;
+}

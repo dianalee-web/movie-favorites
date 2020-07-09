@@ -1,0 +1,17 @@
+<div class="card-container">
+  <div class="card-img">
+    <img src="https://image.tmdb.org/t/p/w200/{{ movie?.poster_path }}" />
+  </div>
+  <div class="card-block">
+    <h5 class="movie-title card-title">
+      {{ movie?.title | titlecase }}
+    </h5>
+
+    <p class="card-text">Average Rating: {{ movie?.vote_average }}</p>
+
+    <p class="card-text" *ngIf="movie.release_date"></p>
+    <div class="icons">
+      <app-modal></app-modal>
+    </div>
+  </div>
+</div>

@@ -14,6 +14,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./movie-display.component.css'],
 })
 export class MovieDisplayComponent implements OnInit {
+  @Input() movieActive;
   basic;
   movies;
   movie: iMovie = {
@@ -22,7 +23,7 @@ export class MovieDisplayComponent implements OnInit {
     posterPath: null,
   };
   // movieForm = {};
-  movieActive;
+  // movieActive;
   constructor(
     private userService: UserService,
     private movieService: MovieService,
@@ -40,8 +41,9 @@ export class MovieDisplayComponent implements OnInit {
     });
   }
   openModal(param) {
+    let movieTitle = '{{movie.movieTitle}}';
     let poster = 'https://image.tmdb.org/t/p/w300/{{ movie.poster_path }}';
-    this.movieActive = { ...param, poster };
+    this.movieActive = { ...param, poster, movieTitle };
 
     if (this.basic === true) {
       return (this.basic = false);
@@ -68,9 +70,6 @@ export class MovieDisplayComponent implements OnInit {
     this.userService.addUserFavorites(this.movie);
 
     alert(`${this.movie.movieTitle} has been added to your favorites!`);
-    // this.userService.addUserFavorites(this.movie).subscribe((res: any) => {
-    //   console.log(res);
-    // });
 
     return movie;
 

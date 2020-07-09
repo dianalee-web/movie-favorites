@@ -1,51 +1,6 @@
-<div class="clr-row"></div>
 <div class="movie-display clr-row">
-  <!-- <div class="clr-col-lg-4 clr-col-12"> -->
   <div class="card" *ngFor="let movie of movies">
-    <div class="card-img">
-      <img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" />
-    </div>
-    <div class="card-block">
-      <h5 class="movie-title card-title">
-        {{ movie.title | titlecase }}
-      </h5>
-      <!-- <p class="card-text">Release Date: {{ movie.release_date | date }}</p> -->
-      <p class="card-text">Average Rating: {{ movie.vote_average }}</p>
-
-      <p class="card-text" *ngIf="movie.release_date"></p>
-      <div class="icons">
-        <a class="btn btn-link" (click)="openModal(movie)">View Details</a>
-        <!-- <clr-modal [(clrModalOpen)]="basic" [clrModalSize]="'lg'">
-          <h2 class="modal-title">{{ movie.title }}</h2>
-          <div class="modal-body">
-            <div class="">
-              <img
-                src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}"
-              />
-            </div>
-            <p>Release Date: {{ movie.release_date | date }}</p>
-            <p>{{ movie.overview }}</p>
-          </div>
-          <div class="modal-footer">
-            <!-- <button
-              type="button"
-              class="btn btn-outline"
-              (click)="basic = false"
-            >
-              Cancel
-            </button> -->
-        <!-- <button type="button" class="btn" (click)="basic = false"> -->
-        <!-- Ok -->
-        <!-- </button> -->
-        <!-- </div> -->
-        <!-- <div class="modal-backdrop" aria-hidden="true"></div> -->
-        <!-- </clr-modal>  -->
-
-        <!--   [class.is-solid]="isFavorite" -->
-        <clr-icon shape="heart" (click)="addToFavorites(movie)"></clr-icon>
-      </div>
-    </div>
+    <app-movie [movie]="movie"></app-movie>
+    <!-- <app-modal [movie]="movie"></app-modal> -->
   </div>
-  <!-- </div> -->
-  <app-modal [basic]="basic" [movieActive]="movieActive"></app-modal>
 </div>

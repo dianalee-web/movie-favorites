@@ -16,6 +16,7 @@ import { SidenavComponent } from './home/sidenav/sidenav.component';
 import { MovieDisplayComponent } from './home/movie-display/movie-display.component';
 import { SearchComponent } from './home/search/search.component';
 import { ModalComponent } from './home/modal/modal.component';
+import { MovieComponent } from './home/movie/movie.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,8 @@ import { ModalComponent } from './home/modal/modal.component';
     LoginComponent,
 
     ModalComponent,
+
+    MovieComponent,
   ],
   imports: [
     BrowserModule,

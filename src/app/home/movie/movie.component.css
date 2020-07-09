@@ -5,6 +5,44 @@
 
 }
 
+
+
+.movie-title {
+  height: 60px;
+}
+
+.icons {
+  /* height: 10vh; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color:
+    /* height: 50px; */
+
+}
+
+.card-img {
+  width: 100%;
+  /* height: 350px; */
+}
+
+.rating {
+
+  display: flex;
+
+  align-items: center;
+  /* border: 1px solid #eee; */
+  /* border-radius: 20%; */
+}
+
+.movie-display {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+}
+
 .box {}
 
 .card {
