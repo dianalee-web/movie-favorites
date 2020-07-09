@@ -22,7 +22,7 @@ export class MovieDisplayComponent implements OnInit {
     posterPath: null,
   };
   // movieForm = {};
-
+  movieActive;
   constructor(
     private userService: UserService,
     private movieService: MovieService,
@@ -39,10 +39,21 @@ export class MovieDisplayComponent implements OnInit {
       this.movies = res.results;
     });
   }
+  openModal(param) {
+    let poster = 'https://image.tmdb.org/t/p/w300/{{ movie.poster_path }}';
+    this.movieActive = { ...param, poster };
+
+    if (this.basic === true) {
+      return (this.basic = false);
+    }
+    this.basic = true;
+    console.log(this.movieActive);
+  }
   seeMovieDetails(movie) {
     this.basic = !this.basic;
     // console.log(this.movie);
     this.movie = movie;
+
     console.log(movie);
   }
   addToFavorites(movie) {

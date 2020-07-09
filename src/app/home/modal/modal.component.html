@@ -1,0 +1,16 @@
+<clr-modal [(clrModalOpen)]="basic" [clrModalSize]="'lg'">
+  <h3 class="modal-title">{{ movieActive?.movieTitle }}</h3>
+  <div class="modal-body">
+    <div class="">
+      <!-- <img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" /> -->
+    </div>
+    <!-- <p>Release Date: {{ movie.release_date | date }}</p>
+    <p>{{ movie.overview }}</p> -->
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn" (click)="basic = false">
+      Ok
+    </button>
+  </div>
+  <div class="modal-backdrop" aria-hidden="true"></div>
+</clr-modal>

@@ -14,10 +14,8 @@
 
       <p class="card-text" *ngIf="movie.release_date"></p>
       <div class="icons">
-        <a class="rating btn btn-link" (click)="seeMovieDetails(movie)"
-          >View Details</a
-        >
-        <clr-modal [(clrModalOpen)]="basic" [clrModalSize]="'lg'">
+        <a class="btn btn-link" (click)="openModal(movie)">View Details</a>
+        <!-- <clr-modal [(clrModalOpen)]="basic" [clrModalSize]="'lg'">
           <h2 class="modal-title">{{ movie.title }}</h2>
           <div class="modal-body">
             <div class="">
@@ -36,12 +34,12 @@
             >
               Cancel
             </button> -->
-            <button type="button" class="btn" (click)="basic = false">
-              Ok
-            </button>
-          </div>
-          <div class="modal-backdrop" aria-hidden="true"></div>
-        </clr-modal>
+        <!-- <button type="button" class="btn" (click)="basic = false"> -->
+        <!-- Ok -->
+        <!-- </button> -->
+        <!-- </div> -->
+        <!-- <div class="modal-backdrop" aria-hidden="true"></div> -->
+        <!-- </clr-modal>  -->
 
         <!--   [class.is-solid]="isFavorite" -->
         <clr-icon shape="heart" (click)="addToFavorites(movie)"></clr-icon>
@@ -49,4 +47,5 @@
     </div>
   </div>
   <!-- </div> -->
+  <app-modal [basic]="basic" [movieActive]="movieActive"></app-modal>
 </div>

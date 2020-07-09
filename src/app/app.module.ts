@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './home/sidenav/sidenav.component';
 import { MovieDisplayComponent } from './home/movie-display/movie-display.component';
 import { SearchComponent } from './home/search/search.component';
+import { ModalComponent } from './home/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,8 @@ import { SearchComponent } from './home/search/search.component';
     SearchComponent,
 
     LoginComponent,
+
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
