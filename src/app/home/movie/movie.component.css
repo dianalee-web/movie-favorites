@@ -36,6 +36,16 @@
   /* border-radius: 20%; */
 }
 
+.star {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.star-icon {
+  color: #fa26a0
+}
+
 .movie-display {
   display: flex;
   width: 100%;
@@ -43,7 +53,6 @@
 
 }
 
-.box {}
 
 .card {
   margin: 8px;
@@ -72,11 +81,8 @@
   /* height: 350px; */
 }
 
-.rating {
-
+.footer {
   display: flex;
-
+  justify-content: space-between;
   align-items: center;
-  /* border: 1px solid #eee; */
-  /* border-radius: 20%; */
 }

@@ -1,4 +1,4 @@
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './home/login/login.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';

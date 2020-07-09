@@ -7,12 +7,23 @@
       {{ movie?.title | titlecase }}
     </h5>
 
-    <p class="card-text">Average Rating: {{ movie?.vote_average }}</p>
+    <h3 class="card-text star">
+      <clr-icon shape="star" size="18" class="is-solid star-icon"> </clr-icon>
+      <span>
+        {{ movie?.vote_average }}
+      </span>
+    </h3>
 
-    <p class="card-text" *ngIf="movie.release_date"></p>
-    <!-- <app-modal></app-modal> -->
-    <div class="icons">
-      <app-modal></app-modal>
+    <p class="card-text" *ngIf="movie.release_date">
+      Release Date:
+      {{ movie?.release_date | date }}
+    </p>
+    <hr />
+
+    <div class="footer">
+      <button class="btn btn-link">View Detail</button>
+      <a><clr-icon shape="heart"></clr-icon></a>
     </div>
+    <app-modal></app-modal>
   </div>
 </div>

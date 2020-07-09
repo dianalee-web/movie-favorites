@@ -48,7 +48,7 @@ export class MovieDisplayComponent implements OnInit {
   }
   seeMovieDetails(movie) {
     this.basic = !this.basic;
-    // console.log(this.movie);
+    console.log(this.movie);
     this.movie = movie;
 
     console.log(movie);
