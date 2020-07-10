@@ -6,14 +6,34 @@ div.register {
   align-items: center;
 }
 
+.login-group {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+
+
+.form {
+
+  background: #eee;
+  width: 60%;
+  display: flex;
+  /* height: 90%; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* align-items: flex-start; */
+
+}
+
 .register-form {
   min-height: 90vh;
-  width: 500px;
+  /* width: 500px; */
 }
 
-input {
-  width: 500px;
-
+.login-button {
+  color: #fff;
+  border: none;
+  border-radius: 10%;
+  background: #0a97b0;
 }
-
-button {}

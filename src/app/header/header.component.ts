@@ -1,5 +1,5 @@
 import { UserService } from './../services/user.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+  @Input() loggedInUser;
   isLoggedIn: boolean;
 
   firstName: string;
@@ -15,7 +16,5 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     // this.userService.loginUser(params);
     // this.firstName = this.userService.firstName;
-    this.loginUser();
   }
-  loginUser() {}
 }

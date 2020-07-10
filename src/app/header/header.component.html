@@ -1,12 +1,36 @@
-<header class="header-5">
+<header class="header">
   <div class="branding">
-    <a routerLink="home">Movies</a>
+    <a routerLink="home">
+      <div class="logo-container">
+        <img class="logo" src="../../assets/images/moviestream.jpg" alt="" />
+      </div>
+    </a>
   </div>
   <div class="header-nav">
-    <a class="nav-link" routerLink="register">Register</a>
-    <a class="nav-link" routerLink="login">Log In </a>
+    <a class="nav-link nav-text" routerLink="register">Register</a>
   </div>
-  <!-- <div class="header-actions">
+  <div class="header-actions">
+    <a class="nav-link nav-text" routerLink="login">Sign In</a>
+    <app-login></app-login>
+    <!--
+    <clr-dropdown>
+      <button
+        class="nav-text"
+        clrDropdownTrigger
+        aria-label="open user profile"
+      >
+        <clr-icon shape="user" class="is-solid"></clr-icon> {{ firstName }}
+        <clr-icon shape="caret down"></clr-icon>
+      </button>
+      <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+        <a href="..." clrDropdownItem>Favorites</a>
+        <a href="..." clrDropdownItem>Log out</a>
+      </clr-dropdown-menu>
+    </clr-dropdown> -->
+  </div>
+</header>
+
+<!-- <div class="header-actions">
     <clr-dropdown *ngIf="!isLoggedIn">
       <button
         class="nav-text"
@@ -22,4 +46,3 @@
       </clr-dropdown-menu>
     </clr-dropdown>
   </div> -->
-</header>

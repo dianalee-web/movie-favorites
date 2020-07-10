@@ -1,20 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-// import { Observable } from 'rxjs/Observable';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
 
 import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  firstName: string = '';
+  // firstName: string = '';
   isLoggedIn: boolean = false;
   userEmail: string = '';
-  // userId = sessionStorage.getItem('userId');
-  // token = sessionStorage.getItem('token');
-
+  firstName;
   baseUrl: string = 'http://localhost:3000/api/';
   appUserUrl: string = 'appUsers/';
   loginUrl: string = 'appUsers/login';

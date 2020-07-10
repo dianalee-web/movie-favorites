@@ -35,22 +35,4 @@ export class MovieDisplayComponent implements OnInit {
       this.movies = res.results;
     });
   }
-
-  // addToFavorites(movie) {
-  //   this.movie = movie;
-
-  //   this.movie.movieTitle = movie.title;
-  //   this.movie.thirdPartyMovieId = movie.id;
-  //   this.movie.posterPath = movie.poster_path;
-  //   console.log(this.movie);
-  //   // this.isFavorite = true;
-
-  //   this.userService.addUserFavorites(this.movie);
-
-  //   alert(`${this.movie.movieTitle} has been added to your favorites!`);
-
-  //   return movie;
-
-  //   // alert(this.movie);
-  // }
 }

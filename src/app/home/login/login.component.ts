@@ -13,6 +13,9 @@ export class LoginComponent implements OnInit {
     password: null,
     email: null,
   };
+  loggedInUser;
+
+  firstName: string;
 
   constructor(private router: Router, private userService: UserService) {}
 
@@ -23,10 +26,14 @@ export class LoginComponent implements OnInit {
       console.log(res);
       sessionStorage.setItem('token', res.token);
       sessionStorage.setItem('userId', res.userId);
-      this.userService.firstName = res.firstName;
-      // this.userService.isLoggedIn = true;
+      // this.loggedInUser = res;
+      // console.log(this.loggedInUser);
+      this.userService.firstName = this.firstName;
+
+      this.userService.isLoggedIn = true;
       if (sessionStorage.token != null) {
-        alert('log in success!');
+        alert('Welcome back');
+        // console.log(this.firstName);
         this.goToDash();
       } else {
         alert('Register !');

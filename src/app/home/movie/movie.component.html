@@ -8,7 +8,8 @@
     </h4>
     <div class="box">
       <h3 class="card-text star">
-        <clr-icon shape="star" size="18" class="is-solid star-icon"> </clr-icon>
+        <clr-icon shape="star" size="20" class="is-solid star-icon"> </clr-icon>
+        &nbsp;
         <span>
           {{ movie?.vote_average }}
         </span>
@@ -20,9 +21,12 @@
       <button class="btn btn-link" (click)="onClick()">
         View Detail
       </button>
-      <a><clr-icon shape="heart"></clr-icon></a>
+      <!-- <app-favorites [movieActive]="movieActive"></app-favorites> -->
+      <a
+        ><clr-icon shape="heart" size="20" (click)="addToFavorites()"></clr-icon
+      ></a>
     </div>
     <!-- <app-modal></app-modal> -->
-    <app-modal [(basic)]="basic" [(movieActive)]="movieActive"></app-modal>
+    <app-modal [basic]="basic" [movieActive]="movieActive"></app-modal>
   </div>
 </div>

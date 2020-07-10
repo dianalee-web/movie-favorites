@@ -1,12 +1,20 @@
-div.register {
-  height: 100vh;
-  /* background-color: teal; */
+.register {
+  height: 90vh;
+
+  background: #eee url(../../assets/images/moviereel.jpg) no-repeat fixed center;
+  background-blend-mode: overlay;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
-.register-form {
+img {
+  height: 100%;
+  width: auto;
+}
+
+24 .register-form {
   min-height: 90vh;
   width: 500px;
 }

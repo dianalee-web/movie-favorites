@@ -10,20 +10,17 @@
       <div class="text-content">
         <h3>{{ movieActive?.title }}</h3>
         <hr />
-        <p>Release Date: {{ movieActive?.release_date | date }}</p>
+        <p>
+          <em> Release Date: {{ movieActive?.release_date | date }}</em>
+        </p>
 
         <p>
-          Description: <br />
           {{ movieActive?.overview }}
         </p>
       </div>
     </div>
   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn">
-      Ok
-    </button>
-  </div>
+  <div class="modal-footer"></div>
 
   <div class="modal-backdrop" aria-hidden="true"></div>
 </clr-modal>

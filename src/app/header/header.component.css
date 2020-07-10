@@ -1,15 +1,36 @@
 header {
-  background: #0a97b0
+  background: #fff;
+  /* background: #0a97b0; */
+  height: 6vh;
+  display: flex;
+  align-items: center;
+
 }
 
-header a {
-  color: #fff
+.branding {
+  /* background: #fff; */
 }
+
+.logo-container {
+  width: 250px;
+
+  /* height: 100%; */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+header a {}
 
 .header-nav a {
-  color: #fff;
+  /* color: #fff; */
+  color: #0a97b0;
 }
 
-button {
-  color: #333;
+button a {
+  color: #0a97b0;
+  /* color: #333; */
 }

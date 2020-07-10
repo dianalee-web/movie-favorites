@@ -1,8 +1,5 @@
-<div class="register">
-  <form class="login register-form">
-    <section class="title">
-      <h3>Log In</h3>
-    </section>
+<div id="login">
+  <form>
     <div class="login-group">
       <clr-input-container>
         <label class="clr-sr-only">Email</label>
@@ -14,21 +11,31 @@
           [(ngModel)]="form.email"
         />
       </clr-input-container>
+      <span>
+        hello
+      </span>
       <clr-input-container>
         <label class="clr-sr-only">Password</label>
         <input
           type="text"
           name="password"
           clrInput
+          class="password"
           placeholder="Password"
           [(ngModel)]="form.password"
         />
       </clr-input-container>
-
-      <br />
-      <button type="submit" (click)="login()" class="btn btn-primary">
+      <span>
+        hello
+      </span>
+      <!-- <a (click)="login()"> -->
+      <!-- Sign In -->
+      <!-- <clr-icon shape="login" class="login-uttone"></clr-icon> -->
+      <a class="btn login-button" (click)="login()">
         Sign In
-      </button>
+      </a>
+
+      <!-- </a> -->
     </div>
   </form>
 </div>

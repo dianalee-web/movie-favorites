@@ -1,3 +1,4 @@
+import { UserService } from './../../services/user.service';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -11,11 +12,9 @@ export class MovieComponent implements OnInit {
   basic;
   movieActive;
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 
-  ngOnInit() {
-    // console.log('movie component', this.movie);
-  }
+  ngOnInit() {}
   onClick() {
     console.log(this.movie);
     this.openModal(this.movie);
@@ -33,11 +32,9 @@ export class MovieComponent implements OnInit {
     this.basic = true;
     console.log(this.movieActive);
   }
-  // seeMovieDetails(movie) {
-  //   this.basic = !this.basic;
-  //   console.log(this.movie);
-  //   this.movie = movie;
-
-  //   console.log(movie);
-  // }
+  addToFavorites() {
+    // let token = sessionStorage.getItem('token');
+    // let favoritesUrl = "http://localhost:3000/api/appUsers/${sessionStorage.getItem("userId")}/favorites/?access_token=${token}`"
+    // this._http.get(favoritesUrl).subscribe((res) => console.log('res', res));
+  }
 }

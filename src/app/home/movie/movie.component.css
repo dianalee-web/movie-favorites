@@ -5,10 +5,6 @@
 
 
 
-/* .box {
-  display: flex;
-  justify-content: space-between;
-} */
 
 .icons {
   /* height: 10vh; */
@@ -36,11 +32,11 @@
 
 .star {
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
+
 }
 
-.star-icon {
+.star-icon,
+h3 {
   color: #fa26a0
 }
 
