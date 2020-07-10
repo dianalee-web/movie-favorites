@@ -3,27 +3,26 @@
     <img src="https://image.tmdb.org/t/p/w200/{{ movie?.poster_path }}" />
   </div>
   <div class="card-block">
-    <h5 class="movie-title card-title">
+    <h4 class="movie-title card-title">
       {{ movie?.title | titlecase }}
-    </h5>
-
-    <h3 class="card-text star">
-      <clr-icon shape="star" size="18" class="is-solid star-icon"> </clr-icon>
-      <span>
-        {{ movie?.vote_average }}
-      </span>
-    </h3>
-
-    <p class="card-text" *ngIf="movie.release_date">
-      Release Date:
-      {{ movie?.release_date | date }}
-    </p>
+    </h4>
+    <div class="box">
+      <h3 class="card-text star">
+        <clr-icon shape="star" size="18" class="is-solid star-icon"> </clr-icon>
+        <span>
+          {{ movie?.vote_average }}
+        </span>
+      </h3>
+    </div>
     <hr />
 
     <div class="footer">
-      <button class="btn btn-link">View Detail</button>
+      <button class="btn btn-link" (click)="onClick()">
+        View Detail
+      </button>
       <a><clr-icon shape="heart"></clr-icon></a>
     </div>
-    <app-modal></app-modal>
+    <!-- <app-modal></app-modal> -->
+    <app-modal [(basic)]="basic" [(movieActive)]="movieActive"></app-modal>
   </div>
 </div>

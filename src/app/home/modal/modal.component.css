@@ -1,3 +1,4 @@
-.text-content {
-  margin: 0 20px;
+.movie-card {
+  display: flex;
+
 }

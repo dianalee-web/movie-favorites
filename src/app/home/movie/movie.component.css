@@ -1,15 +1,14 @@
-.movie-display {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-
-}
-
-
-
 .movie-title {
   height: 60px;
+
 }
+
+
+
+/* .box {
+  display: flex;
+  justify-content: space-between;
+} */
 
 .icons {
   /* height: 10vh; */
@@ -17,8 +16,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color:
-    /* height: 50px; */
+
 
 }
 
@@ -71,8 +69,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color:
-    /* height: 50px; */
 
 }
 

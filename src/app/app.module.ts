@@ -17,6 +17,7 @@ import { MovieDisplayComponent } from './home/movie-display/movie-display.compon
 import { SearchComponent } from './home/search/search.component';
 import { ModalComponent } from './home/modal/modal.component';
 import { MovieComponent } from './home/movie/movie.component';
+import { FavoritesComponent } from './home/favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,8 @@ import { MovieComponent } from './home/movie/movie.component';
     ModalComponent,
 
     MovieComponent,
+
+    FavoritesComponent,
   ],
   imports: [
     BrowserModule,

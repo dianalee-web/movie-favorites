@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class MovieDisplayComponent implements OnInit {
   @Input() movieActive;
-  basic;
+
   movies;
   movie: iMovie = {
     movieTitle: null,
@@ -35,39 +35,22 @@ export class MovieDisplayComponent implements OnInit {
       this.movies = res.results;
     });
   }
-  openModal(param) {
-    let movieTitle = '{{movie.movieTitle}}';
-    let poster = 'https://image.tmdb.org/t/p/w300/{{ movie.poster_path }}';
-    this.movieActive = { ...param, poster, movieTitle };
 
-    if (this.basic === true) {
-      return (this.basic = false);
-    }
-    this.basic = true;
-    console.log(this.movieActive);
-  }
-  seeMovieDetails(movie) {
-    this.basic = !this.basic;
-    console.log(this.movie);
-    this.movie = movie;
+  // addToFavorites(movie) {
+  //   this.movie = movie;
 
-    console.log(movie);
-  }
-  addToFavorites(movie) {
-    // this.movie = movie;
+  //   this.movie.movieTitle = movie.title;
+  //   this.movie.thirdPartyMovieId = movie.id;
+  //   this.movie.posterPath = movie.poster_path;
+  //   console.log(this.movie);
+  //   // this.isFavorite = true;
 
-    this.movie.movieTitle = movie.title;
-    this.movie.thirdPartyMovieId = movie.id;
-    this.movie.posterPath = movie.poster_path;
-    console.log(this.movie);
-    // this.isFavorite = true;
+  //   this.userService.addUserFavorites(this.movie);
 
-    this.userService.addUserFavorites(this.movie);
+  //   alert(`${this.movie.movieTitle} has been added to your favorites!`);
 
-    alert(`${this.movie.movieTitle} has been added to your favorites!`);
+  //   return movie;
 
-    return movie;
-
-    // alert(this.movie);
-  }
+  //   // alert(this.movie);
+  // }
 }

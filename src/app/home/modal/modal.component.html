@@ -1,35 +1,29 @@
-<div class="modal">
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, facilis sed
-  placeat ad temporibus incidunt architecto eum minima eos enim animi.
-  Laboriosam id, aspernatur minus facere repudiandae iure dicta quo?
-</div>
-<!-- <clr-modal [(clrModalOpen)]="basic" [clrModalSize]="'lg'">
-  <div>
-    <div class="modal-body">
-      <div class="movie-card">
-        <div class="img">
-          <img
-            src="https://image.tmdb.org/t/p/w200/{{ movieActive?.poster_path }}"
-          />
-        </div>
-        <div class="text-content">
-          <h3>{{ movieActive?.title }}</h3>
-          <hr />
-          <p>Release Date: {{ movieActive?.release_date | date }}</p>
+<clr-modal [(clrModalOpen)]="basic" [clrModalSize]="'lg'">
+  <div class="modal-body">
+    <div class="movie-card">
+      <div class="img">
+        <img
+          src="https://image.tmdb.org/t/p/w200/{{ movieActive?.poster_path }}"
+        />
+      </div>
 
-          <p>
-            Description: <br />
-            {{ movieActive?.overview }}
-          </p>
-        </div>
+      <div class="text-content">
+        <h3>{{ movieActive?.title }}</h3>
+        <hr />
+        <p>Release Date: {{ movieActive?.release_date | date }}</p>
+
+        <p>
+          Description: <br />
+          {{ movieActive?.overview }}
+        </p>
       </div>
     </div>
-    <div class="modal-footer">
-      <button type="button" class="btn" (click)="basic = false">
-        Ok
-      </button>
-    </div>
-
-    <div class="modal-backdrop" aria-hidden="true"></div>
   </div>
-</clr-modal> -->
+  <div class="modal-footer">
+    <button type="button" class="btn">
+      Ok
+    </button>
+  </div>
+
+  <div class="modal-backdrop" aria-hidden="true"></div>
+</clr-modal>
