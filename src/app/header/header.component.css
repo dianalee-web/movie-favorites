@@ -32,6 +32,7 @@ header a {
   color: #0a97b0;
 }
 
+
 .header-nav a:hover {
   /* color: #fff; */
   color: #fa25a0;
@@ -39,7 +40,7 @@ header a {
 
 button a {
   color: #0a97b0;
-  /* color: #333; */
+
 }
 
 .profile-icon {

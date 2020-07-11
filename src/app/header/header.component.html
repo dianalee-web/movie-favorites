@@ -7,23 +7,23 @@
     </a>
   </div>
   <div class="header-nav">
-    <a class="nav-link nav-text" routerLink="register">Register</a>
+    <a class="nav-link nav-text" routerLink="register">register</a>
   </div>
   <div class="header-actions">
     <!-- <a class="nav-link nav-text" routerLink="login">Sign In</a> -->
     <app-login></app-login>
   </div>
-  <clr-dropdown *ngIf="isLoggedIn">
+  <!-- <clr-dropdown *ngIf="isLoggedIn">
     <button class="nav-text" clrDropdownTrigger aria-label="open user profile">
       <clr-icon shape="user" size="24" class="is-solid"></clr-icon>
-      <!-- {{ firstName }} -->
+
       <clr-icon shape="caret down"></clr-icon>
     </button>
     <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
       <a href="..." clrDropdownItem>Favorites</a>
       <a href="..." clrDropdownItem>Log out</a>
     </clr-dropdown-menu>
-  </clr-dropdown>
+  </clr-dropdown> -->
 </header>
 
 <!-- <div class="header-actions">

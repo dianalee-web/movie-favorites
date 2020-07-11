@@ -18,20 +18,14 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   login() {
-    this.userService.isLoggedIn = true;
     this.userService.loginUser(this.form).subscribe((res: any) => {
       sessionStorage.setItem('token', res.token);
       sessionStorage.setItem('userId', res.userId);
 
-      // console.log(res);
+      console.log(res);
+
       if (sessionStorage.token !== null) {
         this.loginSuccess();
-        // this.userService.userInfo;
-        // this.userService.getRegisteredUserInfo().subscribe((res: any) => {
-        // this.userService.userInfo.push(res);
-        // });
-
-        // this.userService.isLoggedIn = true;
       } else {
         this.loginFail();
       }
@@ -39,6 +33,15 @@ export class LoginComponent implements OnInit {
   }
 
   loginSuccess() {
+    this.userService.getRegisteredUserInfo().subscribe((res: any) => {
+      console.log(res);
+      console.log(res.firstName, res.lastName, res.email);
+
+      this.userService.isLoggedIn = true;
+
+      alert('login success');
+    });
+
     // console.log(this.userService.res);
     // this.userService.isLoggedIn = true;
     // console.log('success', this.userService.userInfo);

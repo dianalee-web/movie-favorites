@@ -26,12 +26,24 @@
       <span>
         hi
       </span>
-      <div class="button">
+      <div class="button btn btn-link">
         <a class="login-button" (click)="login()">
           Sign In
         </a>
       </div>
-      <!-- </a> -->
     </div>
   </form>
+
+  <clr-dropdown class="registeredUserIcon">
+    <button class="nav-text" clrDropdownTrigger aria-label="open user profile">
+      <clr-icon shape="user" size="22" class="is-solid"> </clr-icon>
+      &nbsp;
+      <clr-icon shape="caret down" size="22" class="caret arrow"></clr-icon>
+    </button>
+    <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+      <a> My Favorite Movies</a>
+      <a>Log out</a>
+    </clr-dropdown-menu>
+  </clr-dropdown>
+  -
 </div>

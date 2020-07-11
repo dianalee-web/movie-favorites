@@ -1,6 +1,5 @@
-div.register {
-  height: 100vh;
-
+#login {
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +10,9 @@ div.register {
   align-items: center;
 }
 
-
+.registeredUserIcon {
+  color: #fa25a0
+}
 
 .form {
 
@@ -32,6 +33,7 @@ div.register {
 }
 
 #login .button a {
+  text-transform: lowercase;
 
   text-decoration: none;
   color: #0a97b0;
@@ -42,4 +44,16 @@ div.register {
 
 #login .button a:hover {
   color: #fa26a0
+}
+
+.registeredUserIcon .is-solid {
+  color: #fa26a0;
+}
+
+.caret {
+  color: #fa26a0;
+}
+
+.arrow {
+  color: #fa25a0
 }
