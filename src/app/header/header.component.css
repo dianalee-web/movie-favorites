@@ -4,7 +4,7 @@ header {
   height: 6vh;
   display: flex;
   align-items: center;
-
+  padding-right: 70px;
 }
 
 .branding {
@@ -23,11 +23,19 @@ img {
 }
 
 
-header a {}
+header a {
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 1.1rem
+}
 
 .header-nav a {
   /* color: #fff; */
   color: #0a97b0;
+}
+
+.header-nav a:hover {
+  /* color: #fff; */
+  color: #fa25a0;
 }
 
 button a {

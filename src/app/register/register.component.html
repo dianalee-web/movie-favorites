@@ -1,50 +1,78 @@
 <div class="register">
-  <form class="login register-form">
-    <section class="title">
-      <h3>Register</h3>
-    </section>
-    <div class="login-group">
-      <clr-input-container>
-        <label class="clr-sr-only">First Name</label>
-        <input
-          type="text"
-          name="firstName"
-          clrInput
-          placeholder="First Name"
-          [(ngModel)]="form.firstName"
-        />
-      </clr-input-container>
-      <clr-input-container>
-        <label class="clr-sr-only">Last Name</label>
-        <input
-          type="text"
-          name="lastName"
-          clrInput
-          placeholder="Last Name"
-          [(ngModel)]="form.lastName"
-        />
-      </clr-input-container>
-      <clr-input-container>
-        <label class="clr-sr-only">Email</label>
-        <input
-          type="text"
-          name="email"
-          clrInput
-          placeholder="Email"
-          [(ngModel)]="form.email"
-        />
-      </clr-input-container>
-      <clr-input-container>
-        <label class="clr-sr-only">Password</label>
-        <input
-          type="text"
-          name="password"
-          clrInput
-          placeholder="Password"
-          [(ngModel)]="form.password"
-        />
-      </clr-input-container>
-      <!-- <clr-password-container>
+  <div>
+    <h3>
+      Benefits of your free <span class="logo-style">MovieStream</span> account
+    </h3>
+  </div>
+
+  <div class="register-content">
+    <div class="register-left">
+      <section class="benefits">
+        <h4>
+          Popular Movies
+        </h4>
+        <p>Watch full-length movies for free.</p>
+        <!-- <br /> -->
+
+        <h4>
+          Your Ratings
+        </h4>
+        <p>Rate and remember everything you've seen.</p>
+
+        <h4>Contribute to <span class="logo-style"></span></h4>
+        <p>
+          Add data that will be seen by millions of people and get cool badges.
+        </p>
+      </section>
+    </div>
+    <div class="register-right">
+      <form class="login register-form">
+        <!-- <section class="title">
+        <h3>Register</h3>
+      </section> -->
+
+        <div class="login-group">
+          <clr-input-container>
+            <label class="clr-sr-only">First Name</label>
+            <input
+              type="text"
+              name="firstName"
+              clrInput
+              placeholder="First Name"
+              [(ngModel)]="form.firstName"
+            />
+          </clr-input-container>
+          <clr-input-container>
+            <label class="clr-sr-only">Last Name</label>
+            <input
+              type="text"
+              name="lastName"
+              clrInput
+              placeholder="Last Name"
+              [(ngModel)]="form.lastName"
+            />
+          </clr-input-container>
+          <clr-input-container>
+            <label class="clr-sr-only">Email</label>
+            <input
+              type="text"
+              name="email"
+              clrInput
+              placeholder="Email"
+              [(ngModel)]="form.email"
+            />
+          </clr-input-container>
+          <clr-input-container>
+            <label class="clr-sr-only">Password</label>
+            <input
+              type="text"
+              name="password"
+              clrInput
+              placeholder="Password"
+              [(ngModel)]="form.password"
+            />
+          </clr-input-container>
+          <!-- <clr-password-container>
         <label class="clr-sr-only">Password</label>
         <input
           type="password"
@@ -54,10 +82,12 @@
           [(ngModel)]="form.password"
         />
       </clr-password-container> -->
-      <br />
-      <button type="submit" (click)="signUp()" class="btn btn-primary">
-        Submit
-      </button>
+          <br />
+          <button type="submit" (click)="signUp()" class="btn btn-primary">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
-  </form>
+  </div>
 </div>

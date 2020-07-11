@@ -1,39 +1,32 @@
+#movie-card {
+  color: #333;
+
+}
+
 .movie-title {
-  height: 60px;
-
+  height: 50px;
+  overflow: scroll;
 }
 
 
 
 
-.icons {
-  /* height: 10vh; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-
-}
-
-.card-img {
-  width: 100%;
-  /* height: 350px; */
-}
 
 .rating {
 
   display: flex;
 
   align-items: center;
-  /* border: 1px solid #eee; */
-  /* border-radius: 20%; */
+
 }
 
 .star {
   display: flex;
 
 }
+
+
+
 
 .star-icon,
 h3 {
@@ -48,16 +41,14 @@ h3 {
 }
 
 
-.card {
-  margin: 8px;
-  width: 280px;
 
-}
 
 
 
 .movie-title {
   height: 60px;
+  letter-spacing: 2px;
+  font-weight: bolder;
 }
 
 .icons {
@@ -77,4 +68,18 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+}
+
+.footer a {
+  color: #0a97b0;
+  font-size: 24px;
+}
+
+.footer button {
+  color: #0a97b0;
+}
+
+.footer button:hover {
+  color: #fa26a0
 }

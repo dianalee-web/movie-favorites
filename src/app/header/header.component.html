@@ -10,24 +10,19 @@
     <a class="nav-link nav-text" routerLink="register">Register</a>
   </div>
   <div class="header-actions">
-    <a class="nav-link nav-text" routerLink="login">Sign In</a>
-    <app-login></app-login>
-    <!--
-    <clr-dropdown>
-      <button
-        class="nav-text"
-        clrDropdownTrigger
-        aria-label="open user profile"
-      >
-        <clr-icon shape="user" class="is-solid"></clr-icon> {{ firstName }}
-        <clr-icon shape="caret down"></clr-icon>
-      </button>
-      <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
-        <a href="..." clrDropdownItem>Favorites</a>
-        <a href="..." clrDropdownItem>Log out</a>
-      </clr-dropdown-menu>
-    </clr-dropdown> -->
+    <!-- <a class="nav-link nav-text" routerLink="login">Sign In</a> -->
+    <app-login *ngIf="!isLoggedIn"></app-login>
   </div>
+  <clr-dropdown *ngIf="!isLoggedIn">
+    <button class="nav-text" clrDropdownTrigger aria-label="open user profile">
+      <clr-icon shape="user" class="is-solid"></clr-icon> {{ firstName }}
+      <clr-icon shape="caret down"></clr-icon>
+    </button>
+    <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+      <a href="..." clrDropdownItem>Favorites</a>
+      <a href="..." clrDropdownItem>Log out</a>
+    </clr-dropdown-menu>
+  </clr-dropdown>
 </header>
 
 <!-- <div class="header-actions">

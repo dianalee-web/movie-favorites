@@ -4,9 +4,15 @@
   background: #eee url(../../assets/images/moviereel.jpg) no-repeat fixed center;
   background-blend-mode: overlay;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: space-around; */
   align-items: center;
+  padding-top: 20px;
+}
 
+.register-content {
+  display: flex;
+  padding-top: 120px;
 }
 
 img {
@@ -14,14 +20,19 @@ img {
   width: auto;
 }
 
-24 .register-form {
-  min-height: 90vh;
+
+
+.register-left,
+.register-right {
   width: 500px;
+
+}
+
+.benefits {
+  width: 400px;
 }
 
 input {
-  width: 500px;
+  width: 400px;
 
 }
-
-button {}

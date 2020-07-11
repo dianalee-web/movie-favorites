@@ -1,6 +1,6 @@
 div.register {
   height: 100vh;
-  /* background-color: teal; */
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,6 @@ div.register {
 
 .login-group {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -16,24 +15,31 @@ div.register {
 
 .form {
 
-  background: #eee;
   width: 60%;
   display: flex;
-  /* height: 90%; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* align-items: flex-start; */
+
 
 }
 
 .register-form {
   min-height: 90vh;
-  /* width: 500px; */
+
 }
 
 .login-button {
-  color: #fff;
-  border: none;
-  border-radius: 10%;
-  background: #0a97b0;
+  font-family: 'Covered By Your Grace', cursive;
+
+}
+
+#login .button a {
+
+  text-decoration: none;
+  color: #0a97b0;
+  font-size: 24px;
+  position: relative;
+  top: 6px;
+}
+
+#login .button a:hover {
+  color: #fa26a0
 }

@@ -13,9 +13,8 @@ export class LoginComponent implements OnInit {
     password: null,
     email: null,
   };
-  loggedInUser;
 
-  firstName: string;
+  registeredUser: any = {};
 
   constructor(private router: Router, private userService: UserService) {}
 
@@ -26,23 +25,27 @@ export class LoginComponent implements OnInit {
       console.log(res);
       sessionStorage.setItem('token', res.token);
       sessionStorage.setItem('userId', res.userId);
-      // this.loggedInUser = res;
-      // console.log(this.loggedInUser);
-      this.userService.firstName = this.firstName;
 
-      this.userService.isLoggedIn = true;
-      if (sessionStorage.token != null) {
-        alert('Welcome back');
-        // console.log(this.firstName);
-        this.goToDash();
+      if (sessionStorage.token !== null) {
+        this.userService.getRegisteredUserInfo().subscribe((res: any) => {
+          console.log('here', res);
+        });
+        this.registeredUser = res;
+        console.log('HERE', this.registeredUser);
+        this.userService.isLoggedIn = true;
+        this.loginSuccess();
       } else {
-        alert('Register !');
-        this.router.navigate(['/register']);
+        this.loginFail();
       }
     });
   }
 
-  goToDash() {
+  loginSuccess() {
+    alert('log in successful');
     this.router.navigate(['/home']);
+  }
+  loginFail() {
+    alert('login FAIL ');
+    this.router.navigate(['/register']);
   }
 }
