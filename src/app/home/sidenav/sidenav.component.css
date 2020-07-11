@@ -1,1 +1,33 @@
+aside {
+  font-family: 'Overpass', sans-serif;
+  flex-direction: column;
+  background: #0a97b0;
+  border: none;
+  /* font-family: 'Covered By Your Grace', cursive; */
+  display: flex;
+}
 
+aside .sidebar {
+  display: flex;
+}
+
+h4 {
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.sidebar a {
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  /* border: 1px solid red; */
+  padding: 10px 20px;
+
+}
+
+.sidebar a:hover {
+  color: #fa26a0;
+  background: #fff;
+  opacity: 0.8;
+  /* color: #fff;s */
+}

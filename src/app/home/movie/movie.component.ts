@@ -32,9 +32,4 @@ export class MovieComponent implements OnInit {
     this.basic = true;
     console.log(this.movieActive);
   }
-  addToFavorites() {
-    // let token = sessionStorage.getItem('token');
-    // let favoritesUrl = "http://localhost:3000/api/appUsers/${sessionStorage.getItem("userId")}/favorites/?access_token=${token}`"
-    // this._http.get(favoritesUrl).subscribe((res) => console.log('res', res));
-  }
 }

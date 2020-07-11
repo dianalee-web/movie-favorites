@@ -1,18 +1,17 @@
 header {
   background: #fff;
   /* background: #0a97b0; */
-  height: 6vh;
+  height: 65px;
+
   display: flex;
   align-items: center;
-  padding-right: 70px;
-}
+  padding-right: 120px;
 
-.branding {
-  /* background: #fff; */
 }
 
 .logo-container {
   width: 250px;
+  height: 100%;
 
   /* height: 100%; */
 }
@@ -41,4 +40,8 @@ header a {
 button a {
   color: #0a97b0;
   /* color: #333; */
+}
+
+.profile-icon {
+  color: #0a97b0
 }

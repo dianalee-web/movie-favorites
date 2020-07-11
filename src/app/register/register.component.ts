@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
       console.log(res);
       sessionStorage.setItem('token', res.token);
       sessionStorage.setItem('userId', res.userId);
-      this.userService.firstName = res.firstName;
+      // this.userService.firstName = res.firstName;
       this.userService.isLoggedIn = true;
       this.goToDash();
     });

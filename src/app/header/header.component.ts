@@ -7,16 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() registeredUser;
-
+  // @Input() registeredUser;
+  // currentUser: any;
   isLoggedIn: boolean;
-
-  firstName: string;
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    // this.userService.isLoggedIn = !this.userService.isLoggedIn;
-    // this.userService.loginUser(params);
-    // this.firstName = this.userService.firstName;
+    // console.log(this.currentUser[1].firstName);
+    // this.changeNavigationLinks();
+    // return (this.userService.isLoggedIn = this.isLoggedIn);
+  }
+  changeNavigationLinks() {
+    // console.log(this.currentUser);
   }
 }

@@ -11,11 +11,12 @@
   </div>
   <div class="header-actions">
     <!-- <a class="nav-link nav-text" routerLink="login">Sign In</a> -->
-    <app-login *ngIf="!isLoggedIn"></app-login>
+    <app-login></app-login>
   </div>
-  <clr-dropdown *ngIf="!isLoggedIn">
+  <clr-dropdown *ngIf="isLoggedIn">
     <button class="nav-text" clrDropdownTrigger aria-label="open user profile">
-      <clr-icon shape="user" class="is-solid"></clr-icon> {{ firstName }}
+      <clr-icon shape="user" size="24" class="is-solid"></clr-icon>
+      <!-- {{ firstName }} -->
       <clr-icon shape="caret down"></clr-icon>
     </button>
     <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">

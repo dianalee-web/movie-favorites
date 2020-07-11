@@ -7,9 +7,14 @@ import { map } from 'rxjs/operators';
 })
 export class UserService {
   // firstName: string = '';
-  isLoggedIn: boolean = false;
-  userEmail: string = '';
-  firstName;
+  userInfo = [];
+
+  registeredUser: any = {};
+
+  currentAppUser: any = {};
+
+  isLoggedIn: boolean;
+
   baseUrl: string = 'http://localhost:3000/api/';
   appUserUrl: string = 'appUsers/';
   loginUrl: string = 'appUsers/login';

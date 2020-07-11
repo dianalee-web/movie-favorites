@@ -9,7 +9,7 @@
 .card {
   /* padding: 15px; */
   margin: 10px 15px;
-  width: 320px;
+  width: 260px;
   /* height: 200px; */
 
 }
@@ -17,6 +17,7 @@
 
 
 .movie-title {
+
   height: 60px;
 }
 

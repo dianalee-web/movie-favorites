@@ -1,8 +1,13 @@
-<clr-vertical-nav *ngFor="let genre of genres">
-  <div class="sidebar">
-    <a clrVerticalNavLink (click)="onSelect()">
+<!-- <clr-vertical-nav *ngFor="let genre of genres"> -->
+<aside>
+  <h4>Movie Genre</h4>
+  <br />
+  <div class="sidebar" *ngFor="let genre of genres">
+    <a (click)="onSelect()">
       {{ genre.name }}
     </a>
   </div>
-  <!-- <div class="nav-divider"></div> -->
-</clr-vertical-nav>
+</aside>
+
+<!-- <div class="nav-divider"></div> -->
+<!-- </clr-vertical-nav> -->

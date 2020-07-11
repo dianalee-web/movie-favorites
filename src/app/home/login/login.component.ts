@@ -1,5 +1,4 @@
 import { UserService } from './../../services/user.service';
-
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -14,26 +13,25 @@ export class LoginComponent implements OnInit {
     email: null,
   };
 
-  registeredUser: any = {};
-
   constructor(private router: Router, private userService: UserService) {}
 
   ngOnInit(): void {}
 
   login() {
+    this.userService.isLoggedIn = true;
     this.userService.loginUser(this.form).subscribe((res: any) => {
-      console.log(res);
       sessionStorage.setItem('token', res.token);
       sessionStorage.setItem('userId', res.userId);
 
+      // console.log(res);
       if (sessionStorage.token !== null) {
-        this.userService.getRegisteredUserInfo().subscribe((res: any) => {
-          console.log('here', res);
-        });
-        this.registeredUser = res;
-        console.log('HERE', this.registeredUser);
-        this.userService.isLoggedIn = true;
         this.loginSuccess();
+        // this.userService.userInfo;
+        // this.userService.getRegisteredUserInfo().subscribe((res: any) => {
+        // this.userService.userInfo.push(res);
+        // });
+
+        // this.userService.isLoggedIn = true;
       } else {
         this.loginFail();
       }
@@ -41,7 +39,10 @@ export class LoginComponent implements OnInit {
   }
 
   loginSuccess() {
-    alert('log in successful');
+    // console.log(this.userService.res);
+    // this.userService.isLoggedIn = true;
+    // console.log('success', this.userService.userInfo);
+    // alert('log in successful');
     this.router.navigate(['/home']);
   }
   loginFail() {
