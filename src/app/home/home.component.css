@@ -3,18 +3,19 @@
 }
 
 nav {
-  background: #0a97b0;
+  /* background: #0a97b0; */
 }
 
 nav .sidenav {
-  background: #0a97b0;
+  /* background: #0a97b0; */
 
 
 
 }
 
-@media only screen and (min-width: 900px) {
-  body {
-    background-color: lightblue;
+@media only screen and (max-width: 700px) {
+  nav {
+
+    /* background-color: red; */
   }
 }

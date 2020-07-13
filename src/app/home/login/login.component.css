@@ -1,7 +1,7 @@
 #login {
   /* height: 100vh; */
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
@@ -18,6 +18,8 @@
 
   width: 60%;
   display: flex;
+
+
 
 
 }
@@ -46,14 +48,28 @@
   color: #fa26a0
 }
 
+.registeredUserIcon {
+  padding-top: 20px;
+}
+
 .registeredUserIcon .is-solid {
-  color: #fa26a0;
+  /* color: #fa26a0; */
+
+  color: #0a97b0;
 }
 
-.caret {
-  color: #fa26a0;
+button .caret {
+  /* color: #fa26a0; */
+  color: #0a97b0
 }
 
-.arrow {
-  color: #fa25a0
+.user-email-display {
+  color: #0a97b0;
+  font-size: 15px;
+  /* font-family: 'Covered By Your Grace', cursive; */
+}
+
+.user-options {
+  padding: 10px;
+  color: #333;
 }

@@ -1,13 +1,11 @@
 .register {
   height: 90vh;
 
-  background: #eee url(../../assets/images/moviereel.jpg) no-repeat fixed center;
-  background-blend-mode: overlay;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
+
   align-items: center;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .register-content {

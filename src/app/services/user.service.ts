@@ -11,7 +11,7 @@ export class UserService {
 
   registeredUser: any = {};
 
-  // currentAppUser: any = {};
+  currentAppUser: any = {};
 
   isLoggedIn: boolean = false;
 
@@ -31,7 +31,7 @@ export class UserService {
   }
   loginUser(userCredentials) {
     const creds = this.getCreds();
-    //  http://localhost:3000/api/appUsers/login?access_token=7l543yhmbLuEf3jgsYOQLE1DXijbIFc7tPX9mNh7XcgdgpCED367XCwnIdLH3rvs
+
     return this.http.post(
       `${this.baseUrl}${this.appUserUrl}login?access_token=${creds.token}`,
       userCredentials

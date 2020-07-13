@@ -5,7 +5,7 @@ header {
 
   display: flex;
   align-items: center;
-  padding-right: 120px;
+  padding-right: 60px;
 
 }
 
@@ -45,4 +45,8 @@ button a {
 
 .profile-icon {
   color: #0a97b0
+}
+
+.hamburger-icon {
+  color: #333;
 }

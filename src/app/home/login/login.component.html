@@ -1,6 +1,6 @@
 <div id="login">
   <form>
-    <div class="login-group">
+    <div class="login-group" *ngIf="!isLoggedIn">
       <clr-input-container>
         <label class="clr-sr-only">Email</label>
         <input
@@ -34,14 +34,19 @@
     </div>
   </form>
 
-  <clr-dropdown class="registeredUserIcon">
+  <clr-dropdown class="registeredUserIcon" *ngIf="isLoggedIn">
     <button class="nav-text" clrDropdownTrigger aria-label="open user profile">
-      <clr-icon shape="user" size="22" class="is-solid"> </clr-icon>
-      &nbsp;
-      <clr-icon shape="caret down" size="22" class="caret arrow"></clr-icon>
+      <!-- <clr-icon shape="user" size="22" class="is-solid"> </clr-icon> -->
+      <span class="user-email-display">{{ currentAppUser.email }} &nbsp;</span>
+
+      <clr-icon shape="caret down" size="20" class="caret arrow"></clr-icon>
     </button>
-    <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
-      <a> My Favorite Movies</a>
+    <clr-dropdown-menu
+      *clrIfOpen
+      clrPosition="bottom-right"
+      class="user-options"
+    >
+      <a>My Favorites</a>
       <a>Log out</a>
     </clr-dropdown-menu>
   </clr-dropdown>

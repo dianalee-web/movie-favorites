@@ -34,7 +34,7 @@ h5 {
 
 .star-icon,
 h3 {
-  color: #fa26a0
+  color: #0a97b0
 }
 
 .movie-display {
@@ -87,3 +87,9 @@ h3 {
 .footer button:hover {
   color: #fa26a0
 }
+
+/* .box {
+  border: 1px solid #0a97b0;
+  border-radius: 10px;
+  padding: 3px 6px;
+} */

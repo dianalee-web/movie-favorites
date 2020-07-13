@@ -12,7 +12,14 @@ export class LoginComponent implements OnInit {
     password: null,
     email: null,
   };
+  isLoggedIn: boolean;
 
+  currentAppUser = {
+    firstName: null,
+    lastName: null,
+    email: null,
+    id: null,
+  };
   constructor(private router: Router, private userService: UserService) {}
 
   ngOnInit(): void {}
@@ -34,14 +41,21 @@ export class LoginComponent implements OnInit {
 
   loginSuccess() {
     this.userService.getRegisteredUserInfo().subscribe((res: any) => {
+      alert('login success');
       console.log(res);
       console.log(res.firstName, res.lastName, res.email);
-
+      this.currentAppUser = res;
+      console.log('app user', this.currentAppUser);
+      // this.userService.isLoggedIn = !this.userService.isLoggedIn;
       this.userService.isLoggedIn = true;
-
-      alert('login success');
+      // this.currentAppUser = this.userService.currentAppUser;
+      this.isLoggedIn = this.userService.isLoggedIn;
     });
-
+    console.log(
+      this.isLoggedIn,
+      this.userService.registeredUser,
+      this.userService.currentAppUser
+    );
     // console.log(this.userService.res);
     // this.userService.isLoggedIn = true;
     // console.log('success', this.userService.userInfo);

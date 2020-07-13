@@ -12,6 +12,7 @@
   <div class="header-actions">
     <!-- <a class="nav-link nav-text" routerLink="login">Sign In</a> -->
     <app-login></app-login>
+    <clr-icon shape="bars" class="hamburger-icon" *ngIf="isLoggedIn"></clr-icon>
   </div>
   <!-- <clr-dropdown *ngIf="isLoggedIn">
     <button class="nav-text" clrDropdownTrigger aria-label="open user profile">
