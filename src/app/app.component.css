@@ -5,20 +5,12 @@
 }
 
 body {
-  /* font-family: 'Overpass', sans-serif; */
-  color: #848080
+
+  color: #848080;
 }
 
 .main-container {
-
+  width: 100%;
   background: #eee url(./../assets/images/moviereel.jpg) no-repeat fixed center;
   background-blend-mode: overlay;
-}
-
-.side-nav {
-  /* background: blue; */
-}
-
-.content-container {
-  /* padding: 0; */
 }

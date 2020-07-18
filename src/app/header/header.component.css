@@ -2,7 +2,7 @@ header {
   background: #fff;
   /* background: #0a97b0; */
   height: 65px;
-
+  width: 100%;
   display: flex;
   align-items: center;
   padding-right: 60px;
@@ -36,6 +36,7 @@ header a {
 .header-nav a:hover {
   /* color: #fff; */
   color: #fa25a0;
+
 }
 
 button a {

@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   movies;
+  movieListTitle;
   constructor(private movieService: MovieService, private router: Router) {}
 
   ngOnInit() {
@@ -17,9 +18,10 @@ export class HomeComponent implements OnInit {
   }
   fetchData() {
     this.movieService.getMovies().subscribe((res: any) => {
-      console.log('from home', typeof res.results);
+      // console.log('from home', typeof res.results);
       this.movieService.data = res.results;
-      console.log(this.movieService.data);
+      this.movieService.movieListTitle = 'Popular Movies';
+      // console.log(this.movieService.data);
     });
     return this.movies;
   }

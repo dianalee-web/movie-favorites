@@ -1,5 +1,5 @@
 import { MovieService } from './../../services/movie.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sidenav',
@@ -8,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
   genres = [];
-  genre = {
+  genre: any = {
     id: null,
     name: null,
   };
+  @Input() genreActive;
   constructor(private movieService: MovieService) {}
 
   ngOnInit() {
@@ -19,14 +20,18 @@ export class SidenavComponent implements OnInit {
   }
   fetchData() {
     this.movieService.getGenres().subscribe((res: any) => {
-      // console.log(res.genres);
+      console.log(res.genres);
       Object.values(res.genres).forEach((entry) => {
-        // console.log(entry);
+        console.log(entry);
+        this.genre = entry;
         this.genres.push(entry);
       });
 
       return this.genres;
     });
   }
-  onSelect() {}
+  displayMovie() {}
+  onSelect() {
+    console.log(this.genre);
+  }
 }

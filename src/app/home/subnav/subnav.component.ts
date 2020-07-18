@@ -1,5 +1,5 @@
 import { MovieService } from './../../services/movie.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-subnav',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subnav.component.css'],
 })
 export class SubnavComponent implements OnInit {
-  genre = {
+  @Input() genre = {
     id: null,
     name: null,
   };
@@ -22,11 +22,15 @@ export class SubnavComponent implements OnInit {
     this.movieService.getGenres().subscribe((res: any) => {
       // console.log(res.genres);
       Object.values(res.genres).forEach((entry) => {
-        // console.log(entry);
+        console.log(entry);
+
         this.genres.push(entry);
       });
 
       return this.genres;
     });
+  }
+  onSelect() {
+    console.log(this.genre.id, this.genre.name);
   }
 }

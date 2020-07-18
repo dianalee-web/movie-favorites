@@ -1,13 +1,21 @@
 <!-- <clr-vertical-nav *ngFor="let genre of genres"> -->
 <aside>
-  <h4>Movie Genre</h4>
-  <br />
-  <div class="sidebar" *ngFor="let genre of genres">
-    <a class="btn" (click)="onSelect()">
+  <!-- <h4>Browse Movies</h4>
+
+  <div class="sidebar">
+    <a (click)="displayMovie()" class="nav-link">Latest Movies</a>
+    <a (click)="displayMovie()" class="nav-link">Popular Movies</a>
+    <a (click)="displayMovie()" class="nav-link">Upcoming Movies</a>
+    <a (click)="displayMovie()" class="nav-link">Top Rated Movies</a>
+
+    <a class="nav-link" href="#" (click)="onSelect()">
       {{ genre.name }}
     </a>
+  </div> -->
+
+  <h4>Movie Genres</h4>
+
+  <div class="sidebar" *ngFor="let genre of genres">
+    <a class="nav-link" (click)="onSelect()"> {{ genre?.name }}</a>
   </div>
 </aside>
-
-<!-- <div class="nav-divider"></div> -->
-<!-- </clr-vertical-nav> -->

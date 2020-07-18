@@ -29,7 +29,7 @@ export class MovieDisplayComponent implements OnInit {
     this.fetchData();
   }
   fetchData() {
-    console.log('movie-display', this.movies);
+    console.log('movie-display');
     this.movieService.getMovies().subscribe((res: any) => {
       console.log(res.results);
       this.movies = res.results;
