@@ -18,6 +18,7 @@ import { SearchComponent } from './home/search/search.component';
 import { ModalComponent } from './home/modal/modal.component';
 import { MovieComponent } from './home/movie/movie.component';
 import { FavoritesComponent } from './home/favorites/favorites.component';
+import { SubnavComponent } from './home/subnav/subnav.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,8 @@ import { FavoritesComponent } from './home/favorites/favorites.component';
     MovieComponent,
 
     FavoritesComponent,
+
+    SubnavComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,7 @@
   <h4>Movie Genre</h4>
   <br />
   <div class="sidebar" *ngFor="let genre of genres">
-    <a (click)="onSelect()">
+    <a class="btn" (click)="onSelect()">
       {{ genre.name }}
     </a>
   </div>
