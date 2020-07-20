@@ -2,10 +2,10 @@
   <div class="content-container">
     <div class="content-area">
       <h4>Popular Movies {{ movieListTitle }}</h4>
-      <app-movie-display []> </app-movie-display>
+      <app-movie-display> </app-movie-display>
     </div>
-    <nav class="sidenav">
-      <app-sidenav></app-sidenav>
+    <nav class="sidenav" *ngFor="let genre of genres">
+      <app-sidenav [genre]="genre" (click)="onSelect()"></app-sidenav>
     </nav>
   </div>
 </div>

@@ -7,12 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./sidenav.component.css'],
 })
 export class SidenavComponent implements OnInit {
-  genres = [];
-  genre: any = {
+  genres: any = [];
+
+  @Input() genre = {
     id: null,
     name: null,
   };
-  @Input() genreActive;
+  // @Input() genreActive;
+
   constructor(private movieService: MovieService) {}
 
   ngOnInit() {
@@ -20,18 +22,18 @@ export class SidenavComponent implements OnInit {
   }
   fetchData() {
     this.movieService.getGenres().subscribe((res: any) => {
-      console.log(res.genres);
-      Object.values(res.genres).forEach((entry) => {
-        console.log(entry);
-        this.genre = entry;
-        this.genres.push(entry);
+      // console.log(typeof res, res, res.genres);
+      console.log('res', res);
+      this.genres = res.genres;
+      this.genres.forEach((genreInfo) => {
+        this.genre = genreInfo;
+        console.log(this.genre);
       });
-
-      return this.genres;
     });
+
+    return this.genres;
   }
-  displayMovie() {}
-  onSelect() {
-    console.log(this.genre);
-  }
+  // onSelect() {
+  //   this.genre;
+  // }
 }

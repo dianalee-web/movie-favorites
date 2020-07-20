@@ -11,9 +11,16 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   movies;
   movieListTitle;
+  genreActive = {
+    name: null,
+    id: null,
+  };
+
+  @Input() genres = [];
   constructor(private movieService: MovieService, private router: Router) {}
 
   ngOnInit() {
+    // console.log(this.genres);
     this.fetchData();
   }
   fetchData() {
@@ -21,8 +28,16 @@ export class HomeComponent implements OnInit {
       // console.log('from home', typeof res.results);
       this.movieService.data = res.results;
       this.movieService.movieListTitle = 'Popular Movies';
-      // console.log(this.movieService.data);
+      console.log(this.movieService.data);
     });
     return this.movies;
+  }
+  onSelect() {
+    // console.log(this.genreActive);
+    this.changeMovieDisplay(this.genreActive);
+  }
+  changeMovieDisplay(param) {
+    console.log(this.genres);
+    console.log(this.genreActive);
   }
 }
