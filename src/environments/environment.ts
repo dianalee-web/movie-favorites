@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+
   baseUrl: 'https://my-heroku-test-test.herokuapp.com/explorer/',
 };
 
