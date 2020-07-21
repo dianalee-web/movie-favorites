@@ -15,8 +15,9 @@ export class UserService {
 
   isLoggedIn: boolean = false;
 
-  // baseUrl: string = 'http://localhost:3000/api/';
-  baseUrl: string = 'https://git.heroku.com/my-heroku-test-test.git/api/';
+  baseUrl: string = 'http://localhost:3000/api/';
+  // https://my-heroku-test-test.herokuapp.com/
+  // baseUrl: string = 'https://my-heroku-test-test.herokuapp.com/explorer/';
   appUserUrl: string = 'appUsers/';
   loginUrl: string = 'appUsers/login';
   favoritesUrl: string = 'favorites';
