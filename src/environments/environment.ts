@@ -2,10 +2,10 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+//DEVELOPMENT mode
 export const environment = {
   production: false,
-
-  baseUrl: 'https://my-heroku-test-test.herokuapp.com/explorer/',
+  baseUrl: 'http://localhost:3000/api/',
 };
 
 /*
